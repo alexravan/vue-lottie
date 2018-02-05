@@ -98,7 +98,7 @@
         "vue-lottie": "^0.1.0",
         "webpack-dev-server": "^2.2.0"
     },
-    "main": "dist/lib/vue-lotie.min.js",
+    "main": "dist/lib/vue-lottie.min.js",
     "keywords": [
         "vue",
         "lottie",
