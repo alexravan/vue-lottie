@@ -1,10 +1,10 @@
 <template>
     <div id="app">
-        <lottie :options="defaultOptions" :height="400" :width="400" v-on:animCreated="handleAnimation"/>
+        <vue-lottie ref="lottie" loop autoplay :data="animationData" :height="400" :width="400"></vue-lottie>
+
         <div>
-            <p>Speed: x{{animationSpeed}}</p>
-            <input type="range" value="1" min="0" max="3" step="0.5"
-                   v-on:change="onSpeedChange" v-model="animationSpeed">
+            <p>Speed: x{{speed}}</p>
+            <input type="range" value="1" min="0" max="3" step="0.5" v-on:change="onSpeedChange" v-model="speed">
         </div>
         <button v-on:click="stop">stop</button>
         <button v-on:click="pause">pause</button>
@@ -14,42 +14,43 @@
 </template>
 
 <script>
-  import Lottie from './lottie.vue';
-  import * as animationData from './assets/pinjump.json';
+    import vueLottie from './components/vue-lottie.vue'
+    import animationData from './assets/pinjump.json'
 
-  export default {
-    name: 'app',
-    components: {
-      'lottie': Lottie
-    },
-    data() {
-      return {
-        defaultOptions: {animationData: animationData},
-        animationSpeed: 1
-      }
-    },
-    methods: {
-      handleAnimation: function (anim) {
-        this.anim = anim;
-      },
+    export default {
+        name: 'app',
+        components: {
+            vueLottie
+        },
+        data () {
+            return {
+                speed: 1,
+                animationData
+            }
+        },
+        computed: {
+            lottie () {
+                return this.$refs.lottie
+            }
+        },
+        methods: {
+            stop () {
+                this.lottie.stop()
+            },
 
-      stop: function () {
-        this.anim.stop();
-      },
+            play () {
+                this.lottie.play()
+            },
 
-      play: function () {
-        this.anim.play();
-      },
+            pause () {
+                this.lottie.pause()
+            },
 
-      pause: function () {
-        this.anim.pause();
-      },
-
-      onSpeedChange: function () {
-        this.anim.setSpeed(this.animationSpeed);
-      }
+            onSpeedChange: function () {
+                this.lottie.setSpeed(this.speed)
+            }
+        }
     }
-  }
 </script>
 
 <style>
