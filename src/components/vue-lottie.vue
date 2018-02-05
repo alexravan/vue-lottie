@@ -23,13 +23,19 @@
 
         data () {
             return {
-                animation: null,
-                style: {
-                    width: this.width ? `${this.width}px` : '100%',
-                    height: this.height ? `${this.height}px` : '100%',
-                    overflow: 'hidden',
-                    margin: '0 auto'
+                animation: null
+            }
+        },
+        computed: {
+            style () {
+                let style = {}
+                if (this.width) {
+                    style.width = this.width + 'px'
                 }
+                if (this.height) {
+                    style.height = this.height + 'px'
+                }
+                return style
             }
         },
         methods: {

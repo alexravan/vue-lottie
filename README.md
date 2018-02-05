@@ -32,8 +32,8 @@ npm install --save https://github.com/serzz1990/vue-lottie
 Available props:
 
 - `data` - animation json data.
-- `width` - svg width (Number). [default: 100%]
-- `height` - svg height (Number). [default: 100%]
+- `width` - svg width (Number).
+- `height` - svg height (Number).
 - `loop` - loop animation. [default: false]
 - `autoplay` - autoplay animation. [default: true]
 - `settings` - bodymovin renderer settings (Object).

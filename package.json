@@ -1,7 +1,7 @@
 {
     "name": "vue-lottie",
     "description": "Lottie Animation View for Vue",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "Sergey Savin",
     "repository": {
         "type": "git",
