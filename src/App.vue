@@ -17,6 +17,7 @@
     import vueLottie from './components/vue-lottie.vue'
     import animationData from './assets/pinjump.json'
 
+
     export default {
         name: 'app',
         components: {
