@@ -102,7 +102,7 @@ Available methods:
 </script>
 ```
 
-#SSR
+## SSR
 Component has validation Vue.prototype.$isServer
 set `true for server side rendering
 ```
