@@ -102,6 +102,13 @@ Available methods:
 </script>
 ```
 
+#SSR
+Component has validation Vue.prototype.$isServer
+set `true for server side rendering
+```
+Vue.prototype.$isServer = true
+```
+
 More information on [Bodymoving Documentation](https://github.com/bodymovin/bodymovin)
 
 ## License
