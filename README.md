@@ -26,7 +26,7 @@ Looking for lottie files › https://www.lottiefiles.com/
 
 Install through npm:
 ```
-npm install --save https://github.com/serzz1990/vue-lottie
+npm install vue-lottie-ssr --save
 ```
 
 
