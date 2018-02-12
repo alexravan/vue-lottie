@@ -4,6 +4,7 @@
 
 ## Demo
 https://serzz1990.github.io/vue-lottie/
+![Demo](https://s5o.ru/storage/dumpster/1/48/d25645a8f285fadc25d399a1a8b34.png)
 
 ## Why Lottie?
 
