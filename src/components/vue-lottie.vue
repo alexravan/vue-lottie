@@ -23,7 +23,8 @@
             },
             settings: Object,
             height: Number,
-            width: Number
+            width: Number,
+            renderer: String,
         },
 
         data () {
@@ -69,7 +70,7 @@
             if (lottieWeb) {
                 this.animation = lottieWeb.loadAnimation({
                     container: this.$refs.lavContainer,
-                    renderer: 'svg',
+                    renderer: this.renderer,
                     loop: this.loop,
                     autoplay: this.autoplay,
                     animationData: this.data,
