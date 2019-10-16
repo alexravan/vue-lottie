@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <vue-lottie class="lottie" ref="lottie" loop autoplay :data="animationData" :height="400" :width="400"></vue-lottie>
+        <vue-lottie class="lottie" ref="lottie" loop autoplay :data="animationData" renderer="canvas" :height="400" :width="400"></vue-lottie>
 
         <div>
             <p>Speed: x{{speed}}</p>

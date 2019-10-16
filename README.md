@@ -2,9 +2,9 @@
 
 [bodymovin](https://github.com/bodymovin/bodymovin) is [Adobe After Effects](http://www.adobe.com/products/aftereffects.html) plugin for exporting animations as JSON, also it provide bodymovin.js for vender them as svg/canvas/html.
 
-## Demo
+<!-- ## Demo
 https://serzz1990.github.io/vue-lottie/
-![Demo](https://s5o.ru/storage/dumpster/1/48/d25645a8f285fadc25d399a1a8b34.png)
+![Demo](https://s5o.ru/storage/dumpster/1/48/d25645a8f285fadc25d399a1a8b34.png) -->
 
 ## Why Lottie?
 
@@ -37,6 +37,7 @@ Available props:
 - `height` - svg height (Number).
 - `loop` - loop animation. [default: false]
 - `autoplay` - autoplay animation. [default: true]
+- `renderer` - 'svg' | 'html' | 'canvas' (String required)
 - `settings` - bodymovin renderer settings (Object).
 
 Available methods:
@@ -50,7 +51,7 @@ Available methods:
 ```vue
 <template>
     <div id="app">
-        <vue-lottie ref="lottie" loop autoplay :data="animationData" :height="400" :width="400"></vue-lottie>
+        <vue-lottie ref="lottie" loop autoplay :data="animationData" renderer="html" :height="400" :width="400"></vue-lottie>
 
         <div>
             <p>Speed: x{{speed}}</p>

@@ -4,10 +4,12 @@
 
 <script>
     import Vue from 'vue'
+    // import lottie from 'lottie-web'
     let lottieWeb
 
     if (!Vue.prototype.$isServer) {
-        lottieWeb = require('lottie-web/build/player/lottie_light.js')
+        // lottieWeb = require('lottie-web/build/player/lottie_light.js')
+        lottieWeb = require('lottie-web')
     }
 
     export default {
@@ -24,7 +26,7 @@
             settings: Object,
             height: Number,
             width: Number,
-            renderer: String,
+            renderer: String
         },
 
         data () {
